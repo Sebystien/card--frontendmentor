@@ -1,0 +1,196 @@
+:root {
+  /*Colors*/
+
+  --clr-blue-light: hsl(225 100% 94%);
+  --clr-blue-bright: hsl(245 75% 52%);
+
+  --clr-neutral-01: hsl(225 100% 98%);
+  --clr-neutral-02: hsl(224 23% 55%);
+  --clr-neutral-03: hsl(223 47% 23%);
+  --clr-neutral-04: hsl(228 100% 99%);
+
+  /* Typography */
+  --ff: "Red Hat Display", sans-serif;
+  --ft-bold: 900;
+  --ft-medium: 700;
+  --ft-regular: 500;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: var(--ff);
+  text-align: center;
+  background: hsl(226 100% 94%) url("/images/pattern-background-mobile.svg")
+    no-repeat;
+  background-position: top;
+
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+img,
+button,
+span {
+  width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: var(--ft-bold);
+}
+
+h3,
+h4 {
+  font-size: 2.2rem;
+  font-weight: var(--ft-bold);
+  line-height: 1.2;
+  color: var(--clr-neutral-03);
+}
+
+a:link,
+a:visited {
+  color: var(--clr-blue-bright);
+}
+
+p {
+  color: var(--clr-neutral-02);
+}
+
+.card {
+  width: 90%;
+  max-width: 45rem;
+  margin: 0 auto;
+  border-radius: 2rem;
+  background: #fff;
+  overflow: hidden;
+}
+
+.card__body {
+  padding: 3.2rem 2.4rem;
+}
+
+.card__title {
+  margin-bottom: 1.6rem;
+}
+
+.card__description,
+.card__player {
+  margin-bottom: 2.4rem;
+}
+
+.card__player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  background: var(--clr-neutral-04);
+}
+
+.btn__confirm {
+  padding: 1.5rem 0;
+  background: var(--clr-blue-bright);
+
+  color: #fff;
+  border-radius: 1rem;
+  margin-bottom: 2.4rem;
+
+  box-shadow: 0px 20px 10px 1px hsla(245 75% 52% /0.1);
+}
+
+.btn__cancel {
+  background: transparent;
+  color: var(--clr-neutral-02);
+}
+
+.player__info {
+  font-size: 1.4rem;
+}
+
+/* .player__top {
+} */
+
+.player__price {
+  font-weight: var(--ft-regular);
+  color: var(--clr-neutral-02);
+}
+
+.player__img {
+  max-width: 4.8rem;
+  height: auto;
+}
+
+/*
+*
+*
+# ------------------------------------------ #
+                 Media Query
+# ------------------------------------------ #
+*
+*
+*/
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.6rem;
+    background: hsl(226 100% 94%) url("/images/pattern-background-desktop.svg")
+      no-repeat;
+    background-position: top;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+  }
+
+  a {
+    font-size: 1.4rem;
+  }
+
+  span {
+    font-size: 1.6rem;
+  }
+
+  .card__header {
+    max-height: 22rem;
+  }
+
+  .card__body {
+    padding: 4.8rem;
+  }
+
+  .card__player {
+    padding: 2.4rem;
+  }
+
+  .card__player > * {
+    flex: 1;
+  }
+
+  button {
+    transition: all 0.3s ease;
+  }
+
+  button:active:not(:last-child),
+  button:hover:not(:last-child) {
+    background: hsl(245, 83%, 68%);
+  }
+}

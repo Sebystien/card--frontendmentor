@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style/styling.css" type="text/css" />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="card">
+      <div class="card__header">
+        <img src="./images/illustration-hero.svg" alt="" />
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">Order Summary</h3>
+        <p class="card__description">
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+
+        <div class="card__player player">
+          <img
+            src="./images/icon-music.svg"
+            alt="Music player"
+            class="player__img"
+          />
+          <h4 class="player__info">
+            <span class="player__top">Annual Plan</span>
+            <span class="player__price">$59.99/year</span>
+          </h4>
+
+          <a href="#" class="player__link">Change</a>
+        </div>
+
+        <button class="card__btn btn__confirm">Proceed to payment</button>
+
+        <button class="card__btn btn__cancel">Cancel the order</button>
+      </div>
+    </div>
+
+    <!--   <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#"></a>.
+    </div> -->
+  </body>
+</html>
